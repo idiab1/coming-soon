@@ -1,0 +1,95 @@
+.flip-clock {
+    --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+    --fcc-digit-block-width: 40px; /* width of digit card */
+    --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+    --fcc-digit-font-size: 30px; /* font size of digit */
+    --fcc-digit-color: #ffffff; /* color of digit */
+    --fcc-label-font-size: 10px; /* font size of label */
+    --fcc-label-color: #ffffff; /* color of label */
+    --fcc-background: #fff; /* background of digit card */
+    --fcc-divider-color: #ffffff; /* color of divider */
+    --fcc-divider-height: 1px; /* height of divider */
+    --fcc-separator-size: 6px; /* size of colon */
+    --fcc-separator-color: #fff; /* color of colon */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+  
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.page video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page__content{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page__content h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.page__content h3{
+    font-weight: 300;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.flip-clock {
+    font-family: 'Orbitron';
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    all: unset;
+    cursor: pointer;
+    color: #000;
+    padding: 12px 25px;
+    background-color: #fff;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+/* Screens bigger than 900px */
+
+@media (min-width: 900px) {
+    .page__content h1{
+        font-size: 4rem;
+    }
+    
+    .page__content h3{
+        font-weight: 300;
+        max-width: 800px;
+        margin-bottom: 2rem;
+    }
+}
